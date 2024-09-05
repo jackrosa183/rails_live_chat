@@ -1,24 +1,14 @@
 # README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+* I made this project to demonstrate some basic turbo stream functionality
+to create a real-time chat room. The chatroom messages will update automatically without user refreshes, or any custom javascript outside of turbo.  
 
 * Ruby version
+    3.3.5
 
-* System dependencies
+* Setup
+    1. Run bin/rails db:setup
+    2. Run bin/dev to start the server
+    3. Visit the local host address
+    4. Create a chat room
+    5. Use two different windows to see the chat feeds update in real-time
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
