@@ -20,7 +20,7 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
     @message = Message.new
-    @messages = @room.messages.order(created_at: :desc)
+    @messages = @room.messages.order(created_at: :desc).first(20)
   end
 
   def room_params
