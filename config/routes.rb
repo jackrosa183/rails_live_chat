@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :rooms, only: [:index, :show, :new, :create] do
+  resources :rooms, only: [ :index, :show, :new, :create ] do
     resources :messages, only: :create
   end
   root "rooms#index"
