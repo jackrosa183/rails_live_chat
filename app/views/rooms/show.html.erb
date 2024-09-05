@@ -1,5 +1,10 @@
-<turbo-frame id="room-content">
-  <h1 class="font-bold text-4xl">
+<div class="flex flex-col w-full items-center gap-4">
+  <h1 class="font-bold text-4xl mx-auto">
     <%= @room.name %>
   </h1>
-</turbo-frame>
+  <div id="messages" class="w-[25rem] mx-[5rem] flex flex-col gap-2 h-[10rem] overflow-y-auto flex-col-reverse">
+    <%= render @messages%>
+    <%= turbo_stream_from @room %>
+  </div>
+  <%= render "messages/form", locals: {room: @room, message: @message}%>
+</div>

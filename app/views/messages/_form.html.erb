@@ -1,0 +1,8 @@
+<%= form_with(model: [@room, @message], data: { turbo_stream: true }) do |form| %>
+  <div id="message_content">
+    <%= form.text_area :content, placeholder: "your message..." %>
+  </div>
+  <div>
+    <%= form.submit "Send", class: "w-full rounded-lg bg-slate-500 text-white"%>
+  </div>
+<% end %>

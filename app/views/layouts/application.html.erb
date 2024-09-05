@@ -17,7 +17,11 @@
   </head>
   <body>
     <main class="container mx-auto my-8 px-5 flex flex-col">
-      <h1 class="font-bold text-4xl mx-auto mb-24">R O O M S</h1>
+      <div class="mx-auto mb-24">
+        <%= link_to root_path do%>
+          <h1 class="font-bold text-4xl">R O O M S</h1>
+        <% end %>
+      </div>
       <%= yield %>
     </main>
   </body>

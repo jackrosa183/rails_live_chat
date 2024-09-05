@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  resources :rooms, only: [ :index, :show, :new, :create ]
+  resources :rooms, only: [:index, :show, :new, :create] do
+    resources :messages, only: :create
+  end
   root "rooms#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
