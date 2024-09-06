@@ -1,4 +1,8 @@
 <div class="p-2 rounded-lg bg-slate-300">
   <%= message.content %>
-  <p class="italic text-xs text-slate-700">Sent at: <%= message.created_at.strftime("%H:%M:%S")%> UTC</p>
+  <div class="italic text-xs text-slate-700">
+    <span>Sent at: </span>
+    <span data-timezone-target="time" data-utc-time="<%= message.created_at.iso8601 %>">
+    </span>
+  </div>
 </div>
