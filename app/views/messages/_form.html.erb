@@ -1,4 +1,6 @@
-<%= form_with(model: [@room, @message], data: { turbo_stream: true }) do |form| %>
-  <%= render "messages/textarea" %>
-  <%= form.submit "Send", class: "w-full rounded-lg bg-slate-500 text-white"%>
+  <%= form_with(model: [@room, @message], data: { turbo_stream: true }) do |form| %>
+  <div class="flex gap-2 items-center items-stretch">
+    <%= render "messages/textarea" %>
+    <%= form.submit "Send", class: "p-4 rounded-lg bg-slate-500 text-white" %>
+  </div>
 <% end %>
